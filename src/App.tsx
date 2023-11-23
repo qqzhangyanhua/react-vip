@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import type { MouseEvent } from 'react'
-import List from './component/List'
 import './App.css'
 import Demo from './component/Demo'
+import Home from './pages/Home'
+import List from './pages/List'
 function App() {
   const [count, setCount] = React.useState(0)
   const [name, setName] = useState('张三')
@@ -13,6 +14,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Home />
       <button onClick={handelClick}>按扭{count}</button>
       <h2>{name}</h2>
       <Demo />
