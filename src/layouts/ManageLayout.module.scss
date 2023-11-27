@@ -1,0 +1,14 @@
+
+.container {
+  margin:  0 auto;
+  padding:  24px 0;
+  display: flex;
+  width: 1200px;
+}
+.left{
+    width:120px;
+}
+.right{
+    flex:1;
+    margin-left: 60px;
+}
