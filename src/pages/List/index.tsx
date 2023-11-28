@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import style from './index.module.scss'
 import QuestionCard from '../../component/QuestionCard'
+import { Button } from 'antd'
 const List = () => {
   const [list, setList] = useState([
     { id: 1, title: '问卷1', isStar: false },
@@ -29,7 +30,9 @@ const List = () => {
       {list.map(item => (
         <div className={style['list-item']} key={item.id}>
           {item.title}
-          <button onClick={handelClick}>按扭</button>
+          <Button type="primary" onClick={handelClick}>
+            按扭
+          </Button>
         </div>
       ))}
       <QuestionCard />
