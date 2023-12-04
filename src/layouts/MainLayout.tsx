@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Layout } from 'antd'
 import styles from './MainLayout.module.scss'
+import Logo from '../component/Logo'
+import UserInfo from '../component/UserInfo'
 const { Header, Footer, Content } = Layout
 
 const headerStyle: React.CSSProperties = {
@@ -17,8 +19,12 @@ const MainLayout: FC = () => {
     <>
       <Layout>
         <Header style={headerStyle} className={styles.header}>
-          <div className={styles.left}> logo</div>
-          <div className={styles.right}> 登陆</div>
+          <div className={styles.left}>
+            <Logo />
+          </div>
+          <div className={styles.right}>
+            <UserInfo />
+          </div>
         </Header>
         <Content className={styles.main}>
           {' '}
