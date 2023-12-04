@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from './index.module.scss'
 import QuestionCard from '../../component/QuestionCard'
 import { Button } from 'antd'
+import ListSearch from '../../component/ListSearch'
 const List = () => {
   const [list, setList] = useState([
     { id: 1, title: '问卷1', isStar: false },
@@ -27,6 +28,7 @@ const List = () => {
   return (
     <>
       <div className={style['list-item']}>List2222222</div>
+      <ListSearch />
       {list.map(item => (
         <div className={style['list-item']} key={item.id}>
           {item.title}
