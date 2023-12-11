@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Typography } from 'antd'
 import { useTitle } from 'ahooks'
 const { Title, Paragraph } = Typography
 import styles from './Home.module.scss'
+import '../mock/index'
 const Home = () => {
   useTitle('首页')
+  useEffect(() => {
+    console.log('home')
+  }, [])
+
   const nav = useNavigate()
 
   const handelLogin = () => {
